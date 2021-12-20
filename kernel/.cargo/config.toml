@@ -1,0 +1,6 @@
+
+[unstable]
+build-std = ["core", "compiler_builtins", "alloc"]
+[build]
+target =  "/home/yxqsnz/Documentos/Projects/Rust/DoorOS/targets/x86_64-unknown-none.json"
+
