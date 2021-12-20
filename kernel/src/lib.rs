@@ -1,5 +1,6 @@
 #![no_std]
 #![feature(alloc_error_handler)]
+#![feature(abi_x86_interrupt)]
 extern crate alloc;
 pub mod api;
 pub mod handlers;

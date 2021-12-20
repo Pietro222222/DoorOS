@@ -1,3 +1,4 @@
+/// FIXME: Allocator can't alloc more than 4KiB
 use crate::api::console::CONSOLE as console;
 pub const HEAP_START: usize = 0x4444_4444_0000;
 use crate::System;

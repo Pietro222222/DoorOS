@@ -7,7 +7,7 @@ macro_rules! set_panic_hook {
         #[panic_handler]
         fn panic(_info: &PanicInfo) -> ! {
             let mut writer = kernel::sys::vga::WRITER.lock();
-            writer.color = kernel::sys::vga::color::ColorCode::Red;
+            writer.color = kernel::sys::vga::color::ColorType::Default(kernel::sys::vga::color::ColorCode::Red);
             use core::fmt::Write;
             writeln!(writer, "Kernel panic: {}", _info).unwrap();
             

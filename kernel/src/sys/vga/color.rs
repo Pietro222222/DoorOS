@@ -18,3 +18,14 @@ pub enum ColorCode {
     Yellow = 0xE,
     Black = 0x0,
 }
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum ColorType {
+    Custom(u8),
+    Default(ColorCode),
+}
+#[macro_export]
+macro_rules! color {
+    ($fg:expr, $bg:expr) => {
+        (($fg as u8) << 4 | $bg as u8) as u8
+    };
+}
